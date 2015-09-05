@@ -9,7 +9,7 @@ makefreqtable <- function(foo){
         mycorpus <- Corpus(VectorSource(docs))
         ae.corpus <- tm_map(mycorpus, tolower)
         ae.corpus <- tm_map(mycorpus, PlainTextDocument)
-        ae.corpus <- tm_map(ae.corpus, removePunctuation)
+        #ae.corpus <- tm_map(ae.corpus, removePunctuation)
 
         
         dtm <- DocumentTermMatrix(ae.corpus);

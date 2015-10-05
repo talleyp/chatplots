@@ -90,6 +90,7 @@
                     function myFunction() {
 
                         //arg values
+
                         var month = (document.getElementById("mySelect").value);
 	                    var username = (document.getElementById("username").value);
 
@@ -122,6 +123,37 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+
+	<script>
+	/*
+	    ░░░░░░░░░░░░░░░░░░░░░░░░░░░
+        ░░░░░░░░░░░░░▄███▄▄▄░░░░░░░
+        ░░░░░░░░░▄▄▄██▀▀▀▀███▄░░░░░
+        ░░░░░░░▄▀▀░░░░░░░░░░░▀█░░░░
+        ░░░░▄▄▀░░░░░░░░░░░░░░░▀█░░░
+        ░░░█░░░░░▀▄░░▄▀░░░░░░░░█░░░
+        ░░░▐██▄░░▀▄▀▀▄▀░░▄██▀░▐▌░░░
+        ░░░█▀█░▀░░░▀▀░░░▀░█▀░░▐▌░░░
+        ░░░█░░▀▐░░░░░░░░▌▀░░░░░█░░░
+        ░░░█░░░░░░░░░░░░░░░░░░░█░░░
+        ░░░░█░░▀▄░░░░▄▀░░░░░░░░█░░░
+        ░░░░█░░░░░░░░░░░▄▄░░░░█░░░░
+        ░░░░░█▀██▀▀▀▀██▀░░░░░░█░░░░
+        ░░░░░█░░▀████▀░░░░░░░█░░░░░
+        ░░░░░░█░░░░░░░░░░░░▄█░░░░░░
+        ░░░░░░░██░░░░░█▄▄▀▀░█░░░░░░
+        ░░░░░░░░▀▀█▀▀▀▀░░░░░░█░░░░░
+        ░░░░░░░░░█░░░░░░░░░░░░█░░░░
+	*/
+	    document.onkeypress = keyPress;
+		function keyPress(e) {
+		    var x = e || window.event;
+			var key = (x.keyCode || x.which);
+			if (key == 13 || key == 3) {
+			    myFunction();
+			}
+		}
+	</script>
 
 </body>
 

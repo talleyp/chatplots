@@ -83,11 +83,11 @@ plotmaker <- function(user, month){
                         geom_text(data=head(userdf,20), aes(x = ST, y = Freq, label = Freq), 
                                   colour="black", size = 3, vjust = -.5)
         
-        hourname <- paste(paste( user, 'hourplot',sep='_'),'.jpg',sep='')
-        emotename <- paste(paste( user,'emoteplot', sep='_'),'.jpg',sep='')
-        emotepername <- paste(paste( user,'emoteperplot', sep='_'),'.jpg',sep='')
-        username <- paste(paste(user,'userplot', sep='_'),'.jpg',sep='')
-        heatname <- paste(paste(user,'tileplot', sep='_'),'.jpg',sep='')
+        hourname <- paste(paste( user, 'hourplot',sep='_'),'.png',sep='')
+        emotename <- paste(paste( user,'emoteplot', sep='_'),'.png',sep='')
+        emotepername <- paste(paste( user,'emoteperplot', sep='_'),'.png',sep='')
+        username <- paste(paste(user,'userplot', sep='_'),'.png',sep='')
+        heatname <- paste(paste(user,'tileplot', sep='_'),'.png',sep='')
         
         ggsave(filename=hourname, plot=hourplot)
         ggsave(filename=emotename, plot=emoteplot)

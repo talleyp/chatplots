@@ -55,7 +55,7 @@ plotmaker <- function(user, month){
         #Percentage emote table
         totalemote <- sum(emotedf$Freq)
         emotetab <- data.table(emotedf)
-        emotetab[,Freq:= Freq/totalemote]
+        emotetab[,Freq:= Freq/totalLines]
         specify_decimal <- function(x, k) format(round(x, k), nsmall=k)
         emotetab[,Freq:= specify_decimal(Freq,2)]
         emotetab[,Freq:= as.numeric(Freq)]

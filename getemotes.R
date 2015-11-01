@@ -8,7 +8,7 @@ getemotes <- function(){
                    "MASTERB8","MLADY","MotherFuckinGame","Nappa","NoTears",
                    "NOTMYTEMPO","OhKrappa","OverRustle","PEPE","Sippy",
                    "SoDoge","SoSad","SOTRIGGERED","SURPRISE",
-                   "SWEATSTINY", "TooSpicy", "UWOTM8", "WhoahDude", "WORTH", "YEE")
+                   "SWEATSTINY", "TooSpicy", "UWOTM8", "WhoahDude", "WORTH", "YEE", "OuO")
         bdggEmoticons <- c("4Head", "ASLAN", "BabyRage", "BrainSlug", "CARBUCKS", 
                    "CORAL", "CUX", "CallHafu", "ChanChamp", "ChibiDesti", 
                    "D:", "DESBRO", "DJAslan", "DSPstiny", "DansGame", 

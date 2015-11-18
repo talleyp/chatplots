@@ -9,11 +9,16 @@ makefreqtable <- function(foo){
         mycorpus <- Corpus(VectorSource(docs))
         ae.corpus <- tm_map(mycorpus, tolower)
         ae.corpus <- tm_map(mycorpus, PlainTextDocument)
+        ae.corpus <- tm_map(ae.corpus, function(x) removeWords(x, stopwords("english")))
         #ae.corpus <- tm_map(ae.corpus, removePunctuation)
-
         
-        dtm <- DocumentTermMatrix(ae.corpus);
-        temp <- inspect(dtm);
-        FreqMat <- data.frame(ST = colnames(temp), Freq = colSums(temp));
+        
+#         dtm <- DocumentTermMatrix(ae.corpus);
+#         temp <- inspect(dtm);
+#         FreqMat <- data.frame(ST = colnames(temp), Freq = colSums(temp));
+        tdm <- TermDocumentMatrix(ae.corpus)
+        m <- as.matrix(tdm)
+        v <- sort(rowSums(m), decreasing=TRUE)
+        FreqMat <- data.frame(ST = names(v), Freq=v)
         return(FreqMat)
 }

@@ -55,7 +55,7 @@ plotmaker <- function(user, month){
         #Percentage emote table
         totalemote <- sum(emotedf$Freq)
         emotetab <- data.table(emotedf)
-        emotetab[,Freq:= Freq/totalLines]
+        emotetab[,Freq:= Freq/totalemote]
         specify_decimal <- function(x, k) format(round(x, k), nsmall=k)
         emotetab[,Freq:= specify_decimal(Freq,2)]
         emotetab[,Freq:= as.numeric(Freq)]
@@ -83,11 +83,11 @@ plotmaker <- function(user, month){
                         geom_text(data=head(userdf,20), aes(x = ST, y = Freq, label = Freq), 
                                   colour="black", size = 3, vjust = -.5)
         
-        hourname <- paste(paste( user, 'hourplot',sep='_'),'.png',sep='')
-        emotename <- paste(paste( user,'emoteplot', sep='_'),'.png',sep='')
-        emotepername <- paste(paste( user,'emoteperplot', sep='_'),'.png',sep='')
-        username <- paste(paste(user,'userplot', sep='_'),'.png',sep='')
-        heatname <- paste(paste(user,'tileplot', sep='_'),'.png',sep='')
+        hourname <- paste(paste( user, 'hourplot',sep='_'),'.jpg',sep='')
+        emotename <- paste(paste( user,'emoteplot', sep='_'),'.jpg',sep='')
+        emotepername <- paste(paste( user,'emoteperplot', sep='_'),'.jpg',sep='')
+        username <- paste(paste(user,'userplot', sep='_'),'.jpg',sep='')
+        heatname <- paste(paste(user,'tileplot', sep='_'),'.jpg',sep='')
         
         ggsave(filename=hourname, plot=hourplot)
         ggsave(filename=emotename, plot=emoteplot)

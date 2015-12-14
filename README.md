@@ -5,4 +5,4 @@ You have to send user and month as char; ex plotmaker(user = 'Talley76', month =
 The files are saved locally so if it's hosted online you can just upload it or w/e
 Currently plotmaker makes individualized filenames, but if I host onto a server i'll change that
 
-OKAY GLHF
+Output plots: https://imgur.com/a/Ah76A

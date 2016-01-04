@@ -1,6 +1,6 @@
 grabusers <- function(month){        
         #Grab users for the month
-        site <- paste('http://overrustlelogs.net/Destinygg%20chatlog/', month, "%202015/userlogs", sep="")
+        site <- paste('http://overrustlelogs.net/Destinygg%20chatlog/', month, "%202016/userlogs", sep="")
         userVec <- xpathApply( htmlTreeParse(site, 
                                              useInt=T), "//td", function(x) xmlValue(x))
         doc.text = gsub('.txt', '', userVec)

@@ -1,5 +1,7 @@
-getlines <- function(month, user){
-        site <- paste('http://overrustlelogs.net/Destinygg%20chatlog/',month,'%202015/userlogs/',user,'.txt', sep="")
+getlines <- function(month, user, year){
+        
+        
+        site <- paste('http://overrustlelogs.net/Destinygg%20chatlog/',month,'%20',year,'/userlogs/',user,'.txt', sep="")
         #load the data
         rawLines <- readLines(site)
         
@@ -10,5 +12,7 @@ getlines <- function(month, user){
         foo <- data.frame(do.call('rbind', strsplit(as.character(l.df$rawLines), paste(user, ':', sep=""),fixed=TRUE)))
         foo <- foo[ ,(1:2)]
         colnames(foo) <- c("date","string")
+        
+        
         return(foo)
 }
